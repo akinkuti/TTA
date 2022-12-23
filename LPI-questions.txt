@@ -1,0 +1,234 @@
+ "i-021a4024b0f684492",
+            "t3.small",
+            "ec2-35-90-32-190.us-west-2.compute.amazonaws.com",
+            "35.90.32.190",
+            "us-west-2a",
+            "vpc-0fbb3229dec48e90e",
+            [
+                "sg-0ace9f4eaecbd4214"
+
+
+
+
+aws ec2 create-security-group \
+--group-name CafeDatabaseSG \
+--description "Security group for Cafe database" \
+--vpc-id vpc-0fbb3229dec48e90e
+
+aws ec2 describe-vpcs --vpc-ids vpc-0fbb3229dec48e90e \
+--filters "Name=tag:Name,Values= Cafe VPC" \
+--query "Vpcs[*].CidrBlock"
+
+10.200.0.0/20
+
+
+aws ec2 describe-subnets \
+--filters "Name=vpc-id,Values=vpc-0fbb3229dec48e90e" \
+--query "Subnets[*].[SubnetId,CidrBlock]"
+
+subnet-09ba13614a63491b6",
+        "10.200.0.0/24"
+		
+aws ec2 describe-availability-zones \
+--filters "Name=region-name,Values=us-west-2" \
+--query "AvailabilityZones[*].ZoneName"	
+
+"us-west-2a",
+    "us-west-2b",
+    "us-west-2c",
+    "us-west-2d"
+
+
+http://35.90.32.190/cafe
+
+	Order Number: 1     Date: 2022-11-15     Time: 06:42:03     Total Amount: $41.00
+
+Item	Price	Quantity	Amount
+Croissant	$1.50	5	$7.50
+Donut	$1.00	6	$6.00
+Chocolate Chip Cookie	$2.50	11	$27.50
+
+
+aws ec2 create-security-group \
+--group-name CafeDatabaseSG \
+--description "Security group for Cafe database" \
+--vpc-id vpc-0fbb3229dec48e90e
+
+
+CafeDatabaseSG GroupId": "sg-0224a29fd5920beeb
+
+aws ec2 authorize-security-group-ingress \
+--group-id sg-0224a29fd5920beeb \aws ec2 wait instance-stopped --instance-id i-003a6bfb4a4f246f2
+
+--protocol tcp --port 3306 \
+--source-group sg-0ace9f4eaecbd4214
+
+https://wwhttps://www.gcptut
+
+https://dheeraj3choudhary.com/aws-lambda-and-s3or-automate-csv-file-processing-from-s3-bucket-and-push-in-dynamodb-using-lambda-python
+
+
+
+while true ; do date ; done
+
+
+I am quite skilled in network design and support, and looking to translate that into cloud roles.
+I have strong analytic skills, and can very easily research on a new topic, whilst coming up with desired results.
+I work well with as part of a team, and have an ever improving customer service skills.
+As i have worked both as an employer and employee, it gives me a much more balanced approach as to requirements from a company's view point.
+I am extremely focused on my golas, with very little external distractions.
+
+
+ 
+ "VolumeId": "vol-03a569c1d5d18af4a"
+
+aws ec2 stop-instances --instance-ids i-003a6bfb4a4f246f2 
+
+aws ec2 start-instances --instance-ids i-003a6bfb4a4f246f2 
+
+
+
+C. The shim.efi boot loader loads another boot loader, which is grubx64.efi by default. 
+The other options are not valid filenames for the purpose described.
+68. D. The /etc/rc.d hierarchy contains symbolic links to files found within /etc/init.d. 
+These symlinks are then used for executing the scripts at the appropriate runlevel. For 
+example, on boot the system will execute the scripts found in the runlevel directory for each 
+runlevel executed at boot time.
+69. A. The default.target is the default target unit that is activated by systemd on boot. 
+The default target then starts other services based on the dependencies.
+70. B. LUNs that contain the characters fc are found through Fibre Channel. Therein lies the 
+difference between options B and C, where option C contains the letters scsi, which would 
+usually represent a local disk. The other options are not valid.
+71. B. NVMe-capable drives are named /dev/nvme*. No special drivers are needed other than 
+those found in the native kernel on a modern system. The other options do not exist as 
+paths by default.
+72. D. The /proc/mdstat file contains information on RAID arrays, including RAID 
+personalities found on the system, the devices that comprise the array, and other pertinent 
+information. The other files shown are not valid.
+73. B. The /sys/class/fc_host directory contains other directories based on the Fibre 
+Channel connections available. Within those host directories will be found the WWN in a 
+file called port_name. The other directory hierarchies are not valid.
+74. C. The /dev/mapper directory contains information about multipath devices such as 
+logical volumes. The other directories are not valid.
+75. C. The lspci command will be used for this purpose. NVMe devices are listed with the 
+name nVME or NVMe; therefore, adding -i to grep will make the search case insensitive. 
+You’d use this in order to ensure that the devices are detected. The other commands are 
+not valid, with the exception of the lspci command, but you cannot grep for scsi in this 
+scenario.
+76. D. Tape devices are found within /dev/st*, making st0 the first device.
+77. C. The /etc/issue file is used to provide a message to users, such as a login banner, prior 
+to local login. The other files shown are not valid for the purpose described.
+78. C. The contents of the file motd, an abbreviation for Message of the Day, are displayed 
+when a user logs in successfully. Among the other options, the contents of /etc/issue are 
+displayed prior to local login. The other filenames are not valid for this purpose.
+79. B. The /etc/issue.net file is used to provide a message for remote logins such as telnet. 
+The other files listed are not valid for the purpose described.
+80. D. The poweroff target of systemd, accessed using the systemctl command, is used for 
+halting the system and then attempting to remove power on compatible systems. The halt
+target stops the system but does not attempt to remove power, whereas reboot simply 
+restarts the system. There is no stop target.
+226 Appendix ■ Answers to Review Questions
+81. A. The -r option is needed to specify reboot, and the format for counting time from now is 
+prefaced with a plus sign (+), making option A correct. Of the other commands, specifying 
++15 without the -r option simply shuts down the computer in 15 minutes, and specifying 
+the time as 00:15, as in option D, will shut down the computer at 12:15 a.m.
+82. A. The service command is used to work with services, such as starting and stopping 
+them. On newer systems, the systemctl command has replaced the service command.
+83. A. The journalctl command with the -b option displays boot messages.
+84. A. The -h option halts the system, including shutting down acpid-related hardware.
+85. C. The number 9 corresponds to SIGKILL and can be passed to the kill command to 
+issue that signal. The number 1 is SIGHUP. Others can be found within the manual for the 
+kill command.
+86. C. The /etc/init.d directory contains the startup and shutdown scripts for services on a 
+Debian system that is not running systemd.
+87. A. Among the options, examining the boot messages would be a first logical step and 
+would prevent having to reboot the system. Rebooting may be a next step in order to 
+examine the status of the peripheral within the BIOS.
+88. C. The -n option prevents the banner from displaying when using wall. The other options 
+shown are not used with the wall command.
+Chapter 2: Topic 102: Linux Installation 
+and Package Management
+1. C. SATA disks are addressed as /dev/sdX, just like a Small Computer System Interface 
+(SCSI ) disk. /dev/hdX is a traditional ATA disk. The other options do not exist.
+2. C. The keyword single, given on the Linux kernel command line, will boot the system 
+into single-user mode. The other options are not valid.
+3. A. The Shift key, if pressed when control has first been handed to GRUB, will cause the 
+GRUB menu to be displayed.
+4. B. The root=/dev/sda2 option will cause the given kernel to load /dev/sda2 for its root 
+partition. The rootpartition option is not valid, and the format of the root={hd0,3} is 
+not valid in this context.
+5. C. You begin an editing session with an e when the boot option is highlighted. 
+
+the root partition at boot time to /dev/sda2?
+A. rootpartition={hd0,2}
+B. root=/dev/sda2
+C. root={hd0,3}
+D. rootpartition=/dev/sda2
+5. Which key combination will enable you to edit the kernel options and then boot when using 
+GRUB Legacy?
+A. ESC for editing and then Return to boot
+B. v for editing and then Return to boot
+C. e for editing and then b to boot
+D. v for editing and then b to boot
+6. During the boot process for a virtual machine, what is the next step in the boot process 
+after the kernel has taken over the initialization process and initializes devices?
+A. The system BIOS initializes devices.
+B. The system is placed in multi-user mode.
+C. The boot loader initializes the kernel.
+D. The root partition is mounted.
+26 Chapter 2 ■ Topic 102: Linux Installation and Package Management
+7. Where in the filesystem will the EFI system partition (ESP) typically be mounted?
+A. /etc/efi
+B. /efi
+C. /sys/efi
+D. /boot/efi
+8. When partitioning a disk for a mail server running postfix, which partition/mounted 
+directory should be the largest in order to allow for mail storage?
+A. /etc
+B. /usr/bin
+C. /mail
+D. /var
+9. Which option within GRUB Legacy is used to indicate that a root partition contains a 
+non-Linux kernel?
+A. initrd
+B. non-linux
+C. rootnoverify
+D. root-win
+10. Which command will output a new GRUB2 configuration file and send the output to the 
+correct location for booting?
+A. update-grub > /boot/grub/grub.cfg
+B. update-grub boot > /boot/grub.cfg
+C. grub-rc.d
+D. grub-boot
+11. What is the maximum number of primary partitions available on an MBR partitioning 
+system?
+A. 2
+B. 4
+C. 1
+D. 5
+12. Which command is used to update the links and cache for shared libraries on the system?
+A. ldcache
+B. cache-update
+C. link-update
+D. ldconfig
+Chapter 2 ■ Topic 102: Linux Installation and Package Management 27
+13. Which command and option is used to update a Debian system to the latest software?
+A. apt-update
+B. apt-get upgrade
+C. dpkg -U
+D. apt-cache clean
+14. Which option given to a yum command will install a given package?
+A. update
+B. configure
+C. install
+D. get
+15. What is the location of the home directory for the root user?
+A. /home/root
+B. /home/su
+C. /root
+D. /
+16. When using rpm2cpio, by default the output is sent to which location?
+A. STDOUT
+B. The cpio.out file
+C. The a.out file
+D. The /tmp/cpi.out fil
